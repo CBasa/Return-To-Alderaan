@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "ReturnToAlderaan",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "ReturnToAlderaan Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Test",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Test",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Test",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Shipping",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Shipping",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"Mac",
+					"Shipping",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Test",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Test",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Test",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Shipping",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Shipping",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaan IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaan IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaan",
+					"IOS",
+					"Shipping",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaanEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"Debug",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaanEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ReturnToAlderaanEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "ReturnToAlderaanEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ReturnToAlderaanEditor",
+					"Mac",
+					"Development",
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch ReturnToAlderaan (Debug)",
+				"request": "launch",
+				"program": "/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "ReturnToAlderaan Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaan (DebugGame)",
+				"request": "launch",
+				"program": "/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "ReturnToAlderaan Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaan (Development)",
+				"request": "launch",
+				"program": "/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "ReturnToAlderaan Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaan (Test)",
+				"request": "launch",
+				"program": "/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "ReturnToAlderaan Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaan (Shipping)",
+				"request": "launch",
+				"program": "/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "ReturnToAlderaan Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaanEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "ReturnToAlderaanEditor Mac Debug Build",
+				"args": [
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaanEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "ReturnToAlderaanEditor Mac DebugGame Build",
+				"args": [
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ReturnToAlderaanEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "ReturnToAlderaanEditor Mac Development Build",
+				"args": [
+					"/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/sf947g1q/Documents/lab/game/Unreal Projects/ReturnToAlderaan/ReturnToAlderaan.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
